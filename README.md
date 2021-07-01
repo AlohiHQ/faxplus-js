@@ -3,7 +3,7 @@
 <p>
   <h4>Made for third-party developers and organizations to send and receive faxes from their own software or application.</h4>
   <p>
-    <a href="#"><img src="https://img.shields.io/npm/v/faxplus-api?style=flat-square" alt="NPM version"></img></a>
+    <a href="#"><img src="https://img.shields.io/npm/v/@alohi/faxplus-api?style=flat-square" alt="NPM version"></img></a>
     <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License">
   </p>
 </p>
