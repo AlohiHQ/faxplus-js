@@ -1,0 +1,25 @@
+{
+  "name": "faxplus",
+  "version": "2.0.0",
+  "description": "API client for faxplus",
+  "author": "Alohi SA",
+  "keywords": [
+    "axios",
+    "fax",
+    "faxplus"
+  ],
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "form-data": "^4.0.0",
+    "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "typescript": "^3.6.4"
+  }
+}
