@@ -1,5 +1,5 @@
 {
-  "name": "faxplus",
+  "name": "@alohi/faxplus-api",
   "version": "2.0.0",
   "description": "API client for faxplus",
   "author": "Alohi SA",
@@ -21,5 +21,17 @@
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "typescript": "^3.6.4"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alohi/faxplus-js.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alohi/faxplus-js/issues"
+  },
+  "homepage": "https://github.com/alohi/faxplus-js#readme"
 }
