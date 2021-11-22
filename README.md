@@ -23,10 +23,10 @@
 
 ```
 // with npm
-npm install faxplus-api
+npm install @alohi/faxplus-api
 
 // with yarn
-yarn add faxplus-api
+yarn add @alohi/faxplus-api
 ```
 
 ## Getting Started
