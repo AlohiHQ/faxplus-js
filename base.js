@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -13,7 +13,7 @@ var tslib_1 = require("tslib");
 // Some imports not used depending on template conditions
 // @ts-ignore
 var axios_1 = require("axios");
-exports.BASE_PATH = "https://restapi.fax.plus/v2".replace(/\/+$/, "");
+exports.BASE_PATH = "https://restapi.fax.plus/v3".replace(/\/+$/, "");
 /**
  *
  * @export

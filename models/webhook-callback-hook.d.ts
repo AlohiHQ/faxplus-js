@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 /**
@@ -23,11 +23,11 @@ export interface WebhookCallbackHook {
      */
     event?: WebhookCallbackHookEventEnum;
     /**
-     * Time of the event
+     * Time of the event. Format: YYYY-MM-DD HH:mm:ss
      * @type {string}
      * @memberof WebhookCallbackHook
      */
-    event_type?: string;
+    event_time?: string;
     /**
      * Configured URL target for this webhook
      * @type {string}

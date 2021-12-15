@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -24,7 +24,7 @@ exports.WebhooksApiAxiosParamCreator = function (configuration) {
     var _this = this;
     return {
         /**
-         * Register a new webhook which will be called on a specific event
+         * Register a new webhook which will be called on a specific event. See the WebhookCallback model
          * @summary Register new webhook
          * @param {Webhook} [webhook] Request to create new webhook
          * @param {*} [options] Override http request option.
@@ -163,7 +163,7 @@ exports.WebhooksApiFp = function (configuration) {
     var localVarAxiosParamCreator = exports.WebhooksApiAxiosParamCreator(configuration);
     return {
         /**
-         * Register a new webhook which will be called on a specific event
+         * Register a new webhook which will be called on a specific event. See the WebhookCallback model
          * @summary Register new webhook
          * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
@@ -233,7 +233,7 @@ exports.WebhooksApiFactory = function (configuration, basePath, axios) {
     var localVarFp = exports.WebhooksApiFp(configuration);
     return {
         /**
-         * Register a new webhook which will be called on a specific event
+         * Register a new webhook which will be called on a specific event. See the WebhookCallback model
          * @summary Register new webhook
          * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
@@ -277,7 +277,7 @@ var WebhooksApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * Register a new webhook which will be called on a specific event
+     * Register a new webhook which will be called on a specific event. See the WebhookCallback model
      * @summary Register new webhook
      * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.

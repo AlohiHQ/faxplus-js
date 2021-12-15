@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -12,10 +12,10 @@ import { FaxCategory } from '../models';
 import { FaxList } from '../models';
 import { PayloadFaxModification } from '../models';
 /**
- * ArchivesApi - axios parameter creator
+ * FaxesApi - axios parameter creator
  * @export
  */
-export declare const ArchivesApiAxiosParamCreator: (configuration?: Configuration) => {
+export declare const FaxesApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      * Delete a specific fax record by providing its id
      * @summary Delete a fax
@@ -35,7 +35,7 @@ export declare const ArchivesApiAxiosParamCreator: (configuration?: Configuratio
      */
     getFax: (userId: string, faxId: string, options?: any) => Promise<RequestArgs>;
     /**
-     * Get your own or your subordinate\'s fax archive information
+     * Get your own or your subordinate\'s faxes list
      * @summary List fax records
      * @param {string} userId self or user id of a corporate member
      * @param {FaxCategory} [category] Category parameter. Valid values: **inbox**, **sent**, **spam**
@@ -58,222 +58,222 @@ export declare const ArchivesApiAxiosParamCreator: (configuration?: Configuratio
     updateFax: (userId: string, faxId: string, payloadFaxModification?: PayloadFaxModification, options?: any) => Promise<RequestArgs>;
 };
 /**
- * ArchivesApi - functional programming interface
+ * FaxesApi - functional programming interface
  * @export
  */
-export declare const ArchivesApiFp: (configuration?: Configuration) => {
+export declare const FaxesApiFp: (configuration?: Configuration) => {
     /**
      * Delete a specific fax record by providing its id
      * @summary Delete a fax
-     * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteFax(requestParameters: ArchivesApiDeleteFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
-     * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getFax(requestParameters: ArchivesApiGetFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
     /**
-     * Get your own or your subordinate\'s fax archive information
+     * Get your own or your subordinate\'s faxes list
      * @summary List fax records
-     * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+     * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFaxes(requestParameters: ArchivesApiListFaxesRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
-     * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateFax(requestParameters: ArchivesApiUpdateFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
 };
 /**
- * ArchivesApi - factory interface
+ * FaxesApi - factory interface
  * @export
  */
-export declare const ArchivesApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+export declare const FaxesApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      * Delete a specific fax record by providing its id
      * @summary Delete a fax
-     * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteFax(requestParameters: ArchivesApiDeleteFaxRequest, options?: any): AxiosPromise<void>;
+    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): AxiosPromise<void>;
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
-     * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getFax(requestParameters: ArchivesApiGetFaxRequest, options?: any): AxiosPromise<Fax>;
+    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): AxiosPromise<Fax>;
     /**
-     * Get your own or your subordinate\'s fax archive information
+     * Get your own or your subordinate\'s faxes list
      * @summary List fax records
-     * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+     * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFaxes(requestParameters: ArchivesApiListFaxesRequest, options?: any): AxiosPromise<FaxList>;
+    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): AxiosPromise<FaxList>;
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
-     * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateFax(requestParameters: ArchivesApiUpdateFaxRequest, options?: any): AxiosPromise<void>;
+    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): AxiosPromise<void>;
 };
 /**
- * Request parameters for deleteFax operation in ArchivesApi.
+ * Request parameters for deleteFax operation in FaxesApi.
  * @export
- * @interface ArchivesApiDeleteFaxRequest
+ * @interface FaxesApiDeleteFaxRequest
  */
-export interface ArchivesApiDeleteFaxRequest {
+export interface FaxesApiDeleteFaxRequest {
     /**
      * self or user id of a corporate member
      * @type {string}
-     * @memberof ArchivesApiDeleteFax
+     * @memberof FaxesApiDeleteFax
      */
     readonly userId: string;
     /**
      *
      * @type {string}
-     * @memberof ArchivesApiDeleteFax
+     * @memberof FaxesApiDeleteFax
      */
     readonly faxId: string;
 }
 /**
- * Request parameters for getFax operation in ArchivesApi.
+ * Request parameters for getFax operation in FaxesApi.
  * @export
- * @interface ArchivesApiGetFaxRequest
+ * @interface FaxesApiGetFaxRequest
  */
-export interface ArchivesApiGetFaxRequest {
+export interface FaxesApiGetFaxRequest {
     /**
      * self or user id of a corporate member
      * @type {string}
-     * @memberof ArchivesApiGetFax
+     * @memberof FaxesApiGetFax
      */
     readonly userId: string;
     /**
      *
      * @type {string}
-     * @memberof ArchivesApiGetFax
+     * @memberof FaxesApiGetFax
      */
     readonly faxId: string;
 }
 /**
- * Request parameters for listFaxes operation in ArchivesApi.
+ * Request parameters for listFaxes operation in FaxesApi.
  * @export
- * @interface ArchivesApiListFaxesRequest
+ * @interface FaxesApiListFaxesRequest
  */
-export interface ArchivesApiListFaxesRequest {
+export interface FaxesApiListFaxesRequest {
     /**
      * self or user id of a corporate member
      * @type {string}
-     * @memberof ArchivesApiListFaxes
+     * @memberof FaxesApiListFaxes
      */
     readonly userId: string;
     /**
      * Category parameter. Valid values: **inbox**, **sent**, **spam**
      * @type {FaxCategory}
-     * @memberof ArchivesApiListFaxes
+     * @memberof FaxesApiListFaxes
      */
     readonly category?: FaxCategory;
     /**
      * Start date to get records from that date. Format: *YYYY-MM-DD HH:mm:ss*
      * @type {string}
-     * @memberof ArchivesApiListFaxes
+     * @memberof FaxesApiListFaxes
      */
     readonly after?: string;
     /**
      * End date to get records before that date. Format: *YYYY-MM-DD HH:mm:ss*
      * @type {string}
-     * @memberof ArchivesApiListFaxes
+     * @memberof FaxesApiListFaxes
      */
     readonly before?: string;
     /**
      * Limit of fax records you want to get per request
      * @type {number}
-     * @memberof ArchivesApiListFaxes
+     * @memberof FaxesApiListFaxes
      */
     readonly limit?: number;
 }
 /**
- * Request parameters for updateFax operation in ArchivesApi.
+ * Request parameters for updateFax operation in FaxesApi.
  * @export
- * @interface ArchivesApiUpdateFaxRequest
+ * @interface FaxesApiUpdateFaxRequest
  */
-export interface ArchivesApiUpdateFaxRequest {
+export interface FaxesApiUpdateFaxRequest {
     /**
      * self or user id of a corporate member
      * @type {string}
-     * @memberof ArchivesApiUpdateFax
+     * @memberof FaxesApiUpdateFax
      */
     readonly userId: string;
     /**
      *
      * @type {string}
-     * @memberof ArchivesApiUpdateFax
+     * @memberof FaxesApiUpdateFax
      */
     readonly faxId: string;
     /**
      * Request object for making changes in a fax object
      * @type {PayloadFaxModification}
-     * @memberof ArchivesApiUpdateFax
+     * @memberof FaxesApiUpdateFax
      */
     readonly payloadFaxModification?: PayloadFaxModification;
 }
 /**
- * ArchivesApi - object-oriented interface
+ * FaxesApi - object-oriented interface
  * @export
- * @class ArchivesApi
+ * @class FaxesApi
  * @extends {BaseAPI}
  */
-export declare class ArchivesApi extends BaseAPI {
+export declare class FaxesApi extends BaseAPI {
     /**
      * Delete a specific fax record by providing its id
      * @summary Delete a fax
-     * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    deleteFax(requestParameters: ArchivesApiDeleteFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
-     * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    getFax(requestParameters: ArchivesApiGetFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
     /**
-     * Get your own or your subordinate\'s fax archive information
+     * Get your own or your subordinate\'s faxes list
      * @summary List fax records
-     * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+     * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    listFaxes(requestParameters: ArchivesApiListFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
-     * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    updateFax(requestParameters: ArchivesApiUpdateFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
 }

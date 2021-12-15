@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -16,5 +16,6 @@ exports.WebhookEventType = void 0;
  */
 var WebhookEventType;
 (function (WebhookEventType) {
-    WebhookEventType["FaxReceived"] = "fax_received";
+    WebhookEventType["Received"] = "fax_received";
+    WebhookEventType["Sent"] = "fax_sent";
 })(WebhookEventType = exports.WebhookEventType || (exports.WebhookEventType = {}));

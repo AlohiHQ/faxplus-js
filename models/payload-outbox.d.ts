@@ -1,11 +1,12 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
-import { PayloadOutboxComment } from './payload-outbox-comment';
-import { PayloadOutboxOptions } from './payload-outbox-options';
+import { OutboxComment } from './outbox-comment';
+import { OutboxCoverPage } from './outbox-cover-page';
+import { OutboxOptions } from './outbox-options';
 /**
  * Model for creating new outbound fax
  * @export
@@ -32,16 +33,16 @@ export interface PayloadOutbox {
     files: Array<string>;
     /**
      *
-     * @type {PayloadOutboxComment}
+     * @type {OutboxComment}
      * @memberof PayloadOutbox
      */
-    comment?: PayloadOutboxComment;
+    comment?: OutboxComment;
     /**
      *
-     * @type {PayloadOutboxOptions}
+     * @type {OutboxOptions}
      * @memberof PayloadOutbox
      */
-    options?: PayloadOutboxOptions;
+    options?: OutboxOptions;
     /**
      * Date when to send the fax. Format: **YYYY-MM-DD HH:mm:ss +HHMM**
      * @type {string}
@@ -54,4 +55,10 @@ export interface PayloadOutbox {
      * @memberof PayloadOutbox
      */
     return_ids?: boolean;
+    /**
+     *
+     * @type {OutboxCoverPage}
+     * @memberof PayloadOutbox
+     */
+    cover_page?: OutboxCoverPage;
 }

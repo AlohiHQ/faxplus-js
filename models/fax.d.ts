@@ -1,10 +1,11 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 import { FaxCostDetails } from './fax-cost-details';
+import { FaxCoverPage } from './fax-cover-page';
 import { FaxDirection } from './fax-direction';
 import { FaxStatus } from './fax-status';
 /**
@@ -50,13 +51,13 @@ export interface Fax {
      */
     duration?: number;
     /**
-     *
+     * Fax file ID for the getFile handle
      * @type {string}
      * @memberof Fax
      */
     file?: string;
     /**
-     * File name
+     * Human-readable file name
      * @type {string}
      * @memberof Fax
      */
@@ -128,7 +129,7 @@ export interface Fax {
      */
     scheduled_time?: string;
     /**
-     *
+     * Time at which faxing session started. Format: YYYY-MM-DD HH:mm:ss
      * @type {string}
      * @memberof Fax
      */
@@ -151,4 +152,10 @@ export interface Fax {
      * @memberof Fax
      */
     to?: string;
+    /**
+     *
+     * @type {FaxCoverPage}
+     * @memberof Fax
+     */
+    cover_page?: FaxCoverPage;
 }

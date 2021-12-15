@@ -4,11 +4,11 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ArchivesApi = exports.ArchivesApiFactory = exports.ArchivesApiFp = exports.ArchivesApiAxiosParamCreator = void 0;
+exports.FaxesApi = exports.FaxesApiFactory = exports.FaxesApiFp = exports.FaxesApiAxiosParamCreator = void 0;
 var tslib_1 = require("tslib");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
@@ -17,10 +17,10 @@ var common_1 = require("../common");
 // @ts-ignore
 var base_1 = require("../base");
 /**
- * ArchivesApi - axios parameter creator
+ * FaxesApi - axios parameter creator
  * @export
  */
-exports.ArchivesApiAxiosParamCreator = function (configuration) {
+exports.FaxesApiAxiosParamCreator = function (configuration) {
     var _this = this;
     return {
         /**
@@ -42,7 +42,7 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
                             common_1.assertParamExists('deleteFax', 'userId', userId);
                             // verify required parameter 'faxId' is not null or undefined
                             common_1.assertParamExists('deleteFax', 'faxId', faxId);
-                            localVarPath = "/accounts/{user_id}/archives/{fax_id}"
+                            localVarPath = "/accounts/{user_id}/faxes/{fax_id}"
                                 .replace("{" + "user_id" + "}", encodeURIComponent(String(userId)))
                                 .replace("{" + "fax_id" + "}", encodeURIComponent(String(faxId)));
                             localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -89,7 +89,7 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
                             common_1.assertParamExists('getFax', 'userId', userId);
                             // verify required parameter 'faxId' is not null or undefined
                             common_1.assertParamExists('getFax', 'faxId', faxId);
-                            localVarPath = "/accounts/{user_id}/archives/{fax_id}"
+                            localVarPath = "/accounts/{user_id}/faxes/{fax_id}"
                                 .replace("{" + "user_id" + "}", encodeURIComponent(String(userId)))
                                 .replace("{" + "fax_id" + "}", encodeURIComponent(String(faxId)));
                             localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -118,7 +118,7 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
             });
         },
         /**
-         * Get your own or your subordinate\'s fax archive information
+         * Get your own or your subordinate\'s faxes list
          * @summary List fax records
          * @param {string} userId self or user id of a corporate member
          * @param {FaxCategory} [category] Category parameter. Valid values: **inbox**, **sent**, **spam**
@@ -137,7 +137,7 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
                         case 0:
                             // verify required parameter 'userId' is not null or undefined
                             common_1.assertParamExists('listFaxes', 'userId', userId);
-                            localVarPath = "/accounts/{user_id}/archives"
+                            localVarPath = "/accounts/{user_id}/faxes"
                                 .replace("{" + "user_id" + "}", encodeURIComponent(String(userId)));
                             localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                             if (configuration) {
@@ -196,7 +196,7 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
                             common_1.assertParamExists('updateFax', 'userId', userId);
                             // verify required parameter 'faxId' is not null or undefined
                             common_1.assertParamExists('updateFax', 'faxId', faxId);
-                            localVarPath = "/accounts/{user_id}/archives/{fax_id}"
+                            localVarPath = "/accounts/{user_id}/faxes/{fax_id}"
                                 .replace("{" + "user_id" + "}", encodeURIComponent(String(userId)))
                                 .replace("{" + "fax_id" + "}", encodeURIComponent(String(faxId)));
                             localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -229,16 +229,16 @@ exports.ArchivesApiAxiosParamCreator = function (configuration) {
     };
 };
 /**
- * ArchivesApi - functional programming interface
+ * FaxesApi - functional programming interface
  * @export
  */
-exports.ArchivesApiFp = function (configuration) {
-    var localVarAxiosParamCreator = exports.ArchivesApiAxiosParamCreator(configuration);
+exports.FaxesApiFp = function (configuration) {
+    var localVarAxiosParamCreator = exports.FaxesApiAxiosParamCreator(configuration);
     return {
         /**
          * Delete a specific fax record by providing its id
          * @summary Delete a fax
-         * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -258,7 +258,7 @@ exports.ArchivesApiFp = function (configuration) {
         /**
          * Get a specific fax record details like duration, pages etc.
          * @summary Get a fax record
-         * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -276,9 +276,9 @@ exports.ArchivesApiFp = function (configuration) {
             });
         },
         /**
-         * Get your own or your subordinate\'s fax archive information
+         * Get your own or your subordinate\'s faxes list
          * @summary List fax records
-         * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+         * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -298,7 +298,7 @@ exports.ArchivesApiFp = function (configuration) {
         /**
          * You can modify a fax record\'s comment or mark it as read
          * @summary Modify fax record
-         * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -318,16 +318,16 @@ exports.ArchivesApiFp = function (configuration) {
     };
 };
 /**
- * ArchivesApi - factory interface
+ * FaxesApi - factory interface
  * @export
  */
-exports.ArchivesApiFactory = function (configuration, basePath, axios) {
-    var localVarFp = exports.ArchivesApiFp(configuration);
+exports.FaxesApiFactory = function (configuration, basePath, axios) {
+    var localVarFp = exports.FaxesApiFp(configuration);
     return {
         /**
          * Delete a specific fax record by providing its id
          * @summary Delete a fax
-         * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -337,7 +337,7 @@ exports.ArchivesApiFactory = function (configuration, basePath, axios) {
         /**
          * Get a specific fax record details like duration, pages etc.
          * @summary Get a fax record
-         * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -345,9 +345,9 @@ exports.ArchivesApiFactory = function (configuration, basePath, axios) {
             return localVarFp.getFax(requestParameters, options).then(function (request) { return request(axios, basePath); });
         },
         /**
-         * Get your own or your subordinate\'s fax archive information
+         * Get your own or your subordinate\'s faxes list
          * @summary List fax records
-         * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+         * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -357,7 +357,7 @@ exports.ArchivesApiFactory = function (configuration, basePath, axios) {
         /**
          * You can modify a fax record\'s comment or mark it as read
          * @summary Modify fax record
-         * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+         * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -367,64 +367,64 @@ exports.ArchivesApiFactory = function (configuration, basePath, axios) {
     };
 };
 /**
- * ArchivesApi - object-oriented interface
+ * FaxesApi - object-oriented interface
  * @export
- * @class ArchivesApi
+ * @class FaxesApi
  * @extends {BaseAPI}
  */
-var ArchivesApi = /** @class */ (function (_super) {
-    tslib_1.__extends(ArchivesApi, _super);
-    function ArchivesApi() {
+var FaxesApi = /** @class */ (function (_super) {
+    tslib_1.__extends(FaxesApi, _super);
+    function FaxesApi() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      * Delete a specific fax record by providing its id
      * @summary Delete a fax
-     * @param {ArchivesApiDeleteFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiDeleteFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    ArchivesApi.prototype.deleteFax = function (requestParameters, options) {
+    FaxesApi.prototype.deleteFax = function (requestParameters, options) {
         var _this = this;
-        return exports.ArchivesApiFp(this.configuration).deleteFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return exports.FaxesApiFp(this.configuration).deleteFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
-     * @param {ArchivesApiGetFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiGetFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    ArchivesApi.prototype.getFax = function (requestParameters, options) {
+    FaxesApi.prototype.getFax = function (requestParameters, options) {
         var _this = this;
-        return exports.ArchivesApiFp(this.configuration).getFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return exports.FaxesApiFp(this.configuration).getFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
-     * Get your own or your subordinate\'s fax archive information
+     * Get your own or your subordinate\'s faxes list
      * @summary List fax records
-     * @param {ArchivesApiListFaxesRequest} requestParameters Request parameters.
+     * @param {FaxesApiListFaxesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    ArchivesApi.prototype.listFaxes = function (requestParameters, options) {
+    FaxesApi.prototype.listFaxes = function (requestParameters, options) {
         var _this = this;
-        return exports.ArchivesApiFp(this.configuration).listFaxes(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return exports.FaxesApiFp(this.configuration).listFaxes(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
-     * @param {ArchivesApiUpdateFaxRequest} requestParameters Request parameters.
+     * @param {FaxesApiUpdateFaxRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ArchivesApi
+     * @memberof FaxesApi
      */
-    ArchivesApi.prototype.updateFax = function (requestParameters, options) {
+    FaxesApi.prototype.updateFax = function (requestParameters, options) {
         var _this = this;
-        return exports.ArchivesApiFp(this.configuration).updateFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return exports.FaxesApiFp(this.configuration).updateFax(requestParameters, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
-    return ArchivesApi;
+    return FaxesApi;
 }(base_1.BaseAPI));
-exports.ArchivesApi = ArchivesApi;
+exports.FaxesApi = FaxesApi;

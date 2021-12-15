@@ -1,26 +1,26 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 import { RetryOptions } from './retry-options';
 /**
- *
+ * Additional configuration for sending a fax
  * @export
- * @interface PayloadOutboxOptions
+ * @interface OutboxOptions
  */
-export interface PayloadOutboxOptions {
+export interface OutboxOptions {
     /**
-     *
+     * Text enhancement. Set to True to optimize fax file for text.
      * @type {boolean}
-     * @memberof PayloadOutboxOptions
+     * @memberof OutboxOptions
      */
     enhancement?: boolean;
     /**
      *
      * @type {RetryOptions}
-     * @memberof PayloadOutboxOptions
+     * @memberof OutboxOptions
      */
     retry?: RetryOptions;
 }

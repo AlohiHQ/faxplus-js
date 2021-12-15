@@ -1,11 +1,13 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 import { OutboxComment } from './outbox-comment';
+import { OutboxCoverPage } from './outbox-cover-page';
 import { OutboxInitiatedFrom } from './outbox-initiated-from';
+import { OutboxOptions } from './outbox-options';
 import { OutboxStatus } from './outbox-status';
 import { RetryOptions } from './retry-options';
 /**
@@ -76,10 +78,10 @@ export interface Outbox {
     last_updated_status_time?: string;
     /**
      *
-     * @type {object}
+     * @type {OutboxOptions}
      * @memberof Outbox
      */
-    options?: object;
+    options?: OutboxOptions;
     /**
      * Number of fax pages
      * @type {number}
@@ -140,4 +142,10 @@ export interface Outbox {
      * @memberof Outbox
      */
     uid: string;
+    /**
+     *
+     * @type {OutboxCoverPage}
+     * @memberof Outbox
+     */
+    cover_page?: OutboxCoverPage;
 }

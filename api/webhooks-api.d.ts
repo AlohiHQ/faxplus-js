@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 2.0.0
+ * OpenAPI spec version: 3.0.0
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -17,7 +17,7 @@ import { WebhookList } from '../models';
  */
 export declare const WebhooksApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
-     * Register a new webhook which will be called on a specific event
+     * Register a new webhook which will be called on a specific event. See the WebhookCallback model
      * @summary Register new webhook
      * @param {Webhook} [webhook] Request to create new webhook
      * @param {*} [options] Override http request option.
@@ -47,7 +47,7 @@ export declare const WebhooksApiAxiosParamCreator: (configuration?: Configuratio
  */
 export declare const WebhooksApiFp: (configuration?: Configuration) => {
     /**
-     * Register a new webhook which will be called on a specific event
+     * Register a new webhook which will be called on a specific event. See the WebhookCallback model
      * @summary Register new webhook
      * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
@@ -77,7 +77,7 @@ export declare const WebhooksApiFp: (configuration?: Configuration) => {
  */
 export declare const WebhooksApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
-     * Register a new webhook which will be called on a specific event
+     * Register a new webhook which will be called on a specific event. See the WebhookCallback model
      * @summary Register new webhook
      * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
@@ -148,7 +148,7 @@ export interface WebhooksApiGetWebhooksRequest {
  */
 export declare class WebhooksApi extends BaseAPI {
     /**
-     * Register a new webhook which will be called on a specific event
+     * Register a new webhook which will be called on a specific event. See the WebhookCallback model
      * @summary Register new webhook
      * @param {WebhooksApiCreateWebhookRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
