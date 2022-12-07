@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -75,7 +75,7 @@ export declare const OutboxApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteOutboxFax(requestParameters: OutboxApiDeleteOutboxFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    deleteOutboxFax(requestParameters: OutboxApiDeleteOutboxFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get a list of faxes currently scheduled for sending
      * @summary List outgoing faxes
@@ -83,7 +83,7 @@ export declare const OutboxApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getOutboxFax(requestParameters: OutboxApiGetOutboxFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getOutboxFax(requestParameters: OutboxApiGetOutboxFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get a list of the faxes in the outbox which were not yet sent
      * @summary List faxes in the outbox
@@ -91,7 +91,7 @@ export declare const OutboxApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listOutboxFaxes(requestParameters: OutboxApiListOutboxFaxesRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    listOutboxFaxes(requestParameters: OutboxApiListOutboxFaxesRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Send a fax to one or more destinations. For corporate members without a fax number assigned set the \'from\' parameter to \'no_number\'
      * @summary Send a fax
@@ -99,7 +99,7 @@ export declare const OutboxApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    sendFax(requestParameters: OutboxApiSendFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    sendFax(requestParameters: OutboxApiSendFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Modify an outgoing fax that is being scheduled for sending
      * @summary Modify an outgoing fax
@@ -107,7 +107,7 @@ export declare const OutboxApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateOutboxFax(requestParameters: OutboxApiUpdateOutboxFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateOutboxFax(requestParameters: OutboxApiUpdateOutboxFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
 };
 /**
  * OutboxApi - factory interface
@@ -265,7 +265,7 @@ export declare class OutboxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OutboxApi
      */
-    deleteOutboxFax(requestParameters: OutboxApiDeleteOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    deleteOutboxFax(requestParameters: OutboxApiDeleteOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get a list of faxes currently scheduled for sending
      * @summary List outgoing faxes
@@ -274,7 +274,7 @@ export declare class OutboxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OutboxApi
      */
-    getOutboxFax(requestParameters: OutboxApiGetOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getOutboxFax(requestParameters: OutboxApiGetOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get a list of the faxes in the outbox which were not yet sent
      * @summary List faxes in the outbox
@@ -283,7 +283,7 @@ export declare class OutboxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OutboxApi
      */
-    listOutboxFaxes(requestParameters: OutboxApiListOutboxFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    listOutboxFaxes(requestParameters: OutboxApiListOutboxFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Send a fax to one or more destinations. For corporate members without a fax number assigned set the \'from\' parameter to \'no_number\'
      * @summary Send a fax
@@ -292,7 +292,7 @@ export declare class OutboxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OutboxApi
      */
-    sendFax(requestParameters: OutboxApiSendFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    sendFax(requestParameters: OutboxApiSendFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Modify an outgoing fax that is being scheduled for sending
      * @summary Modify an outgoing fax
@@ -301,5 +301,5 @@ export declare class OutboxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OutboxApi
      */
-    updateOutboxFax(requestParameters: OutboxApiUpdateOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateOutboxFax(requestParameters: OutboxApiUpdateOutboxFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
 }

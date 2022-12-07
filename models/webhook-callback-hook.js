@@ -4,17 +4,12 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebhookCallbackHookEventEnum = void 0;
-/**
-    * @export
-    * @enum {string}
-    */
-var WebhookCallbackHookEventEnum;
-(function (WebhookCallbackHookEventEnum) {
-    WebhookCallbackHookEventEnum["Sent"] = "fax_sent";
-    WebhookCallbackHookEventEnum["Received"] = "fax_received";
-})(WebhookCallbackHookEventEnum = exports.WebhookCallbackHookEventEnum || (exports.WebhookCallbackHookEventEnum = {}));
+exports.WebhookCallbackHookEventEnum = {
+    Sent: 'fax_sent',
+    Received: 'fax_received'
+};

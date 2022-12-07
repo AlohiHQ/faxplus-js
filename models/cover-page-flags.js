@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -14,10 +14,9 @@ exports.CoverPageFlags = void 0;
  * @export
  * @enum {string}
  */
-var CoverPageFlags;
-(function (CoverPageFlags) {
-    CoverPageFlags["Urgent"] = "urgent";
-    CoverPageFlags["ForReview"] = "for_review";
-    CoverPageFlags["PleaseReply"] = "please_reply";
-    CoverPageFlags["Confidential"] = "confidential";
-})(CoverPageFlags = exports.CoverPageFlags || (exports.CoverPageFlags = {}));
+exports.CoverPageFlags = {
+    Urgent: 'urgent',
+    ForReview: 'for_review',
+    PleaseReply: 'please_reply',
+    Confidential: 'confidential'
+};

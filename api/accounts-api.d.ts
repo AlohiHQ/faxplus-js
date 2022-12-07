@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -69,7 +69,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getAccounts(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getAccounts(options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get corporate member\'s role and faxing quota
      * @summary Get member details
@@ -77,7 +77,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getMemberDetails(requestParameters: AccountsApiGetMemberDetailsRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getMemberDetails(requestParameters: AccountsApiGetMemberDetailsRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get information about an account. For members user_id can only be self. For admin it can be either self, or a user_id of any corporate member
      * @summary Get account information
@@ -85,7 +85,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUser(requestParameters: AccountsApiGetUserRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getUser(requestParameters: AccountsApiGetUserRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Update corporate member\'s role and faxing quota
      * @summary Modify member details
@@ -93,7 +93,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateMemberDetails(requestParameters: AccountsApiUpdateMemberDetailsRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateMemberDetails(requestParameters: AccountsApiUpdateMemberDetailsRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Modify personal information of your own account or your corporate member\'s account. user_id can be either self, or a subordinate\'s user_id
      * @summary Modify account information
@@ -101,7 +101,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateUser(requestParameters: AccountsApiUpdateUserRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateUser(requestParameters: AccountsApiUpdateUserRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
 };
 /**
  * AccountsApi - factory interface
@@ -226,7 +226,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    getAccounts(options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getAccounts(options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get corporate member\'s role and faxing quota
      * @summary Get member details
@@ -235,7 +235,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    getMemberDetails(requestParameters: AccountsApiGetMemberDetailsRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getMemberDetails(requestParameters: AccountsApiGetMemberDetailsRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get information about an account. For members user_id can only be self. For admin it can be either self, or a user_id of any corporate member
      * @summary Get account information
@@ -244,7 +244,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    getUser(requestParameters: AccountsApiGetUserRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getUser(requestParameters: AccountsApiGetUserRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Update corporate member\'s role and faxing quota
      * @summary Modify member details
@@ -253,7 +253,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    updateMemberDetails(requestParameters: AccountsApiUpdateMemberDetailsRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateMemberDetails(requestParameters: AccountsApiUpdateMemberDetailsRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Modify personal information of your own account or your corporate member\'s account. user_id can be either self, or a subordinate\'s user_id
      * @summary Modify account information
@@ -262,5 +262,5 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    updateUser(requestParameters: AccountsApiUpdateUserRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateUser(requestParameters: AccountsApiUpdateUserRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
 }

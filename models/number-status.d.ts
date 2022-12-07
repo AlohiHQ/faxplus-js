@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,7 +9,8 @@
  * @export
  * @enum {string}
  */
-export declare enum NumberStatus {
-    WaitingVerification = "waiting_verification",
-    Active = "active"
-}
+export declare const NumberStatus: {
+    readonly WaitingVerification: "waiting_verification";
+    readonly Active: "active";
+};
+export declare type NumberStatus = typeof NumberStatus[keyof typeof NumberStatus];

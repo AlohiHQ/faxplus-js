@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AccountSettingsSendFax } from './account-settings-send-fax';
@@ -16,23 +16,23 @@ export interface AccountSettings {
      * @type {string}
      * @memberof AccountSettings
      */
-    caller_id_name?: string;
+    'caller_id_name'?: string;
     /**
      *
      * @type {object}
      * @memberof AccountSettings
      */
-    options?: object;
+    'options'?: object;
     /**
      *
      * @type {AccountSettingsSendFax}
      * @memberof AccountSettings
      */
-    send_fax?: AccountSettingsSendFax;
+    'send_fax'?: AccountSettingsSendFax;
     /**
      *
      * @type {boolean}
      * @memberof AccountSettings
      */
-    should_enhance?: boolean;
+    'should_enhance'?: boolean;
 }

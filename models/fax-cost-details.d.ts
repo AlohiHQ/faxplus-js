@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,11 +15,11 @@ export interface FaxCostDetails {
      * @type {number}
      * @memberof FaxCostDetails
      */
-    multiplier?: number;
+    'multiplier'?: number;
     /**
      *
      * @type {number}
      * @memberof FaxCostDetails
      */
-    notification_cost?: number;
+    'notification_cost'?: number;
 }

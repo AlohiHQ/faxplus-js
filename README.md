@@ -1,15 +1,17 @@
 # FAX.PLUS JavaScript SDK
 
 <p>
-  <h4>Made for third-party developers and organizations to send and receive faxes from their own software or application.</h4>
-  <p>
-    <a href="https://www.npmjs.com/package/@alohi/faxplus-api"><img src="https://img.shields.io/npm/v/@alohi/faxplus-api?style=flat-square" alt="NPM version"></img></a>
+<h4>Made for third-party developers and organizations to send and receive faxes from their own software or
+    application.</h4>
+<p>
+    <a href="https://www.npmjs.com/package/@alohi/faxplus-api"><img
+            src="https://img.shields.io/npm/v/@alohi/faxplus-api?style=flat-square" alt="NPM version"></img></a>
     <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License">
-  </p>
+</p>
 </p>
 
 <p>
-  <a href="https://apidoc.fax.plus" target="_blank">API Documentation 3.0.0</a>  •
+    <a href="https://apidoc.fax.plus" target="_blank">API Documentation 3.0.2</a>  •
   <a href="https://www.fax.plus" target="_blank">Home</a>  •
   <a href="https://www.fax.plus/help/" target="_blank">Help Center</a>  •
   <a href="https://www.fax.plus/contact-us/" target="_blank">Contact Us</a>
@@ -58,4 +60,4 @@ const response = await request(axios);
 Visit the full API reference at [apidoc.fax.plus](https://apidoc.fax.plus).
 
 ## Author
-© 2021 Alohi (Geneva, Switzerland) - [Alohi.com](https://alohi.com)
+© 2022 Alohi (Geneva, Switzerland) - [Alohi.com](https://alohi.com)

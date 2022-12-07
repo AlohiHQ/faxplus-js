@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -122,6 +122,27 @@ exports.setOAuthToObject = function (object, name, scopes, configuration) {
         });
     });
 };
+function setFlattenedQueryParams(urlSearchParams, parameter, key) {
+    if (key === void 0) { key = ""; }
+    if (typeof parameter === "object") {
+        if (Array.isArray(parameter)) {
+            parameter.forEach(function (item) { return setFlattenedQueryParams(urlSearchParams, item, key); });
+        }
+        else {
+            Object.keys(parameter).forEach(function (currentKey) {
+                return setFlattenedQueryParams(urlSearchParams, parameter[currentKey], "" + key + (key !== '' ? '.' : '') + currentKey);
+            });
+        }
+    }
+    else {
+        if (urlSearchParams.has(key)) {
+            urlSearchParams.append(key, parameter);
+        }
+        else {
+            urlSearchParams.set(key, parameter);
+        }
+    }
+}
 /**
  *
  * @export
@@ -132,21 +153,7 @@ exports.setSearchParams = function (url) {
         objects[_i - 1] = arguments[_i];
     }
     var searchParams = new URLSearchParams(url.search);
-    for (var _a = 0, objects_1 = objects; _a < objects_1.length; _a++) {
-        var object = objects_1[_a];
-        for (var key in object) {
-            if (Array.isArray(object[key])) {
-                searchParams.delete(key);
-                for (var _b = 0, _c = object[key]; _b < _c.length; _b++) {
-                    var item = _c[_b];
-                    searchParams.append(key, item);
-                }
-            }
-            else {
-                searchParams.set(key, object[key]);
-            }
-        }
-    }
+    setFlattenedQueryParams(searchParams, objects);
     url.search = searchParams.toString();
 };
 /**

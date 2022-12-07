@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,13 +9,14 @@
  * @export
  * @enum {string}
  */
-export declare enum AccountStatus {
-    Active = "active",
-    UnverifiedPhone = "unverified_phone",
-    Suspended = "suspended",
-    Disabled = "disabled",
-    Inactive = "inactive",
-    Deleted = "deleted",
-    CorporateDeleted = "corporate_deleted",
-    WaitingForSignup = "waiting_for_signup"
-}
+export declare const AccountStatus: {
+    readonly Active: "active";
+    readonly UnverifiedPhone: "unverified_phone";
+    readonly Suspended: "suspended";
+    readonly Disabled: "disabled";
+    readonly Inactive: "inactive";
+    readonly Deleted: "deleted";
+    readonly CorporateDeleted: "corporate_deleted";
+    readonly WaitingForSignup: "waiting_for_signup";
+};
+export declare type AccountStatus = typeof AccountStatus[keyof typeof AccountStatus];

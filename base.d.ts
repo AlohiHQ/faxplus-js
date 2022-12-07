@@ -1,11 +1,11 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { Configuration } from "./configuration";
-import { AxiosInstance } from 'axios';
+import { AxiosInstance, AxiosRequestConfig } from 'axios';
 export declare const BASE_PATH: string;
 /**
  *
@@ -24,7 +24,7 @@ export declare const COLLECTION_FORMATS: {
  */
 export interface RequestArgs {
     url: string;
-    options: any;
+    options: AxiosRequestConfig;
 }
 /**
  *

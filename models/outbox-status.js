@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -14,10 +14,9 @@ exports.OutboxStatus = void 0;
  * @export
  * @enum {string}
  */
-var OutboxStatus;
-(function (OutboxStatus) {
-    OutboxStatus["Submitted"] = "submitted";
-    OutboxStatus["Converting"] = "converting";
-    OutboxStatus["ScheduledForSending"] = "scheduled_for_sending";
-    OutboxStatus["Sending"] = "sending";
-})(OutboxStatus = exports.OutboxStatus || (exports.OutboxStatus = {}));
+exports.OutboxStatus = {
+    Submitted: 'submitted',
+    Converting: 'converting',
+    ScheduledForSending: 'scheduled_for_sending',
+    Sending: 'sending'
+};

@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,29 +15,29 @@ export interface AccountNotificationsPushSettings {
      * @type {boolean}
      * @memberof AccountNotificationsPushSettings
      */
-    low_credit: boolean;
+    'low_credit': boolean;
     /**
      * Set to true if you want to receive notifications about our new features
      * @type {boolean}
      * @memberof AccountNotificationsPushSettings
      */
-    new_feature: boolean;
+    'new_feature': boolean;
     /**
      * Set to true if you want to receive notifications about receiving faxes
      * @type {boolean}
      * @memberof AccountNotificationsPushSettings
      */
-    receive_fax: boolean;
+    'receive_fax': boolean;
     /**
      * Set to true if you want to receive notifications when your fax is being send
      * @type {boolean}
      * @memberof AccountNotificationsPushSettings
      */
-    send_fax: boolean;
+    'send_fax': boolean;
     /**
      * Set to true if you want to receive new voicemail notifications
      * @type {boolean}
      * @memberof AccountNotificationsPushSettings
      */
-    voicemail: boolean;
+    'voicemail': boolean;
 }

@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { FaxStatus } from './fax-status';
@@ -16,59 +16,59 @@ export interface WebhookCallbackData {
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    id?: string;
+    'id'?: string;
     /**
      * Sender user ID
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    uid?: string;
+    'uid'?: string;
     /**
      * Number of pages in the fax
      * @type {number}
      * @memberof WebhookCallbackData
      */
-    pages?: number;
+    'pages'?: number;
     /**
      * Sender number. Might be a user ID for faxes sent from free accounts
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    from_number?: string;
+    'from_number'?: string;
     /**
      * Fax destination number. Might be a user ID for faxes sent from free accounts
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    to_number?: string;
+    'to_number'?: string;
     /**
      * Time at which faxing session started. Format: YYYY-MM-DD HH:mm:ss
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    start_time?: string;
+    'start_time'?: string;
     /**
      * File ID
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    file?: string;
+    'file'?: string;
     /**
      * Human-readable file name
      * @type {string}
      * @memberof WebhookCallbackData
      */
-    file_name?: string;
+    'file_name'?: string;
     /**
      * Fax cost (in pages)
      * @type {number}
      * @memberof WebhookCallbackData
      */
-    cost?: number;
+    'cost'?: number;
     /**
      *
      * @type {FaxStatus}
      * @memberof WebhookCallbackData
      */
-    status?: FaxStatus;
+    'status'?: FaxStatus;
 }

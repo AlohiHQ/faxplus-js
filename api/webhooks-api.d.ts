@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -53,7 +53,7 @@ export declare const WebhooksApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createWebhook(requestParameters?: WebhooksApiCreateWebhookRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    createWebhook(requestParameters?: WebhooksApiCreateWebhookRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Delete a webhook by its ID
      * @summary Delete webhook
@@ -61,7 +61,7 @@ export declare const WebhooksApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteWebhook(requestParameters: WebhooksApiDeleteWebhookRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    deleteWebhook(requestParameters: WebhooksApiDeleteWebhookRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Returns a list of currently registered webhooks for the requested **event**
      * @summary List user webhooks
@@ -69,7 +69,7 @@ export declare const WebhooksApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getWebhooks(requestParameters: WebhooksApiGetWebhooksRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getWebhooks(requestParameters: WebhooksApiGetWebhooksRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
 };
 /**
  * WebhooksApi - factory interface
@@ -155,7 +155,7 @@ export declare class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    createWebhook(requestParameters?: WebhooksApiCreateWebhookRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    createWebhook(requestParameters?: WebhooksApiCreateWebhookRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Delete a webhook by its ID
      * @summary Delete webhook
@@ -164,7 +164,7 @@ export declare class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    deleteWebhook(requestParameters: WebhooksApiDeleteWebhookRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    deleteWebhook(requestParameters: WebhooksApiDeleteWebhookRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Returns a list of currently registered webhooks for the requested **event**
      * @summary List user webhooks
@@ -173,5 +173,5 @@ export declare class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    getWebhooks(requestParameters: WebhooksApiGetWebhooksRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getWebhooks(requestParameters: WebhooksApiGetWebhooksRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
 }

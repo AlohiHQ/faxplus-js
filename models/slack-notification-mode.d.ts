@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,8 +9,9 @@
  * @export
  * @enum {string}
  */
-export declare enum SlackNotificationMode {
-    WithAttachment = "with_attachment",
-    NoAttachment = "no_attachment",
-    Off = "off"
-}
+export declare const SlackNotificationMode: {
+    readonly WithAttachment: "with_attachment";
+    readonly NoAttachment: "no_attachment";
+    readonly Off: "off";
+};
+export declare type SlackNotificationMode = typeof SlackNotificationMode[keyof typeof SlackNotificationMode];

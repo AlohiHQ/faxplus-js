@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { Number } from './number';
@@ -16,5 +16,5 @@ export interface NumberList {
      * @type {Array<Number>}
      * @memberof NumberList
      */
-    numbers: Array<Number>;
+    'numbers': Array<Number>;
 }

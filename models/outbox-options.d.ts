@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { RetryOptions } from './retry-options';
@@ -16,11 +16,11 @@ export interface OutboxOptions {
      * @type {boolean}
      * @memberof OutboxOptions
      */
-    enhancement?: boolean;
+    'enhancement'?: boolean;
     /**
      *
      * @type {RetryOptions}
      * @memberof OutboxOptions
      */
-    retry?: RetryOptions;
+    'retry'?: RetryOptions;
 }

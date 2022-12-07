@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,7 +9,8 @@
  * @export
  * @enum {string}
  */
-export declare enum FileType {
-    Tiff = "tiff",
-    Pdf = "pdf"
-}
+export declare const FileType: {
+    readonly Tiff: "tiff";
+    readonly Pdf: "pdf";
+};
+export declare type FileType = typeof FileType[keyof typeof FileType];

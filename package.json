@@ -1,15 +1,15 @@
 {
-  "name": "faxplus",
-  "version": "3.0.0",
-  "description": "API client for faxplus",
-  "author": "Alohi SA",
-  "keywords": [
-    "axios",
-    "fax",
-    "faxplus"
-  ],
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+"name": "faxplus",
+"version": "3.0.2",
+"description": "API client for faxplus",
+"author": "Alohi SA",
+"keywords": [
+"axios",
+"fax",
+"faxplus"
+],
+"main": "index.js",
+"typings": "./dist/index.d.ts",
   "dependencies": {
     "axios": "^0.21.1",
     "chai": "^4.3.4",

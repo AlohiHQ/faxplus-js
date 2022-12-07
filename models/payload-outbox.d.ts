@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { OutboxComment } from './outbox-comment';
@@ -18,47 +18,47 @@ export interface PayloadOutbox {
      * @type {string}
      * @memberof PayloadOutbox
      */
-    from: string;
+    'from': string;
     /**
      * List of fax destination numbers
      * @type {Array<string>}
      * @memberof PayloadOutbox
      */
-    to: Array<string>;
+    'to': Array<string>;
     /**
      * List of file names to send. Files should be uploaded beforehand.
      * @type {Array<string>}
      * @memberof PayloadOutbox
      */
-    files: Array<string>;
+    'files': Array<string>;
     /**
      *
      * @type {OutboxComment}
      * @memberof PayloadOutbox
      */
-    comment?: OutboxComment;
+    'comment'?: OutboxComment;
     /**
      *
      * @type {OutboxOptions}
      * @memberof PayloadOutbox
      */
-    options?: OutboxOptions;
+    'options'?: OutboxOptions;
     /**
      * Date when to send the fax. Format: **YYYY-MM-DD HH:mm:ss +HHMM**
      * @type {string}
      * @memberof PayloadOutbox
      */
-    send_time?: string;
+    'send_time'?: string;
     /**
      * Return scheduled fax IDs to use for tracking and with webhooks
      * @type {boolean}
      * @memberof PayloadOutbox
      */
-    return_ids?: boolean;
+    'return_ids'?: boolean;
     /**
      *
      * @type {OutboxCoverPage}
      * @memberof PayloadOutbox
      */
-    cover_page?: OutboxCoverPage;
+    'cover_page'?: OutboxCoverPage;
 }

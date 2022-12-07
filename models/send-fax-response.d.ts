@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -12,10 +12,10 @@
 export interface SendFaxResponse {
     /**
      * Destination-to-ID mapping
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof SendFaxResponse
      */
-    ids?: {
-        [key: string]: object;
+    'ids'?: {
+        [key: string]: any;
     };
 }

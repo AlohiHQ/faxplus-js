@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { WebhookCallbackData } from './webhook-callback-data';
@@ -17,11 +17,11 @@ export interface WebhookCallback {
      * @type {WebhookCallbackHook}
      * @memberof WebhookCallback
      */
-    hook?: WebhookCallbackHook;
+    'hook'?: WebhookCallbackHook;
     /**
      *
      * @type {WebhookCallbackData}
      * @memberof WebhookCallback
      */
-    data?: WebhookCallbackData;
+    'data'?: WebhookCallbackData;
 }

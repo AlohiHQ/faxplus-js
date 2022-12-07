@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AccountNotificationsEmailSettingsAttachments } from './account-notifications-email-settings-attachments';
@@ -16,41 +16,41 @@ export interface AccountNotificationsEmailSettings {
      * @type {Array<string>}
      * @memberof AccountNotificationsEmailSettings
      */
-    addresses?: Array<string>;
+    'addresses'?: Array<string>;
     /**
      *
      * @type {AccountNotificationsEmailSettingsAttachments}
      * @memberof AccountNotificationsEmailSettings
      */
-    attachments?: AccountNotificationsEmailSettingsAttachments;
+    'attachments'?: AccountNotificationsEmailSettingsAttachments;
     /**
      * Set to true if you want to receive notifications when your balance is low
      * @type {boolean}
      * @memberof AccountNotificationsEmailSettings
      */
-    low_credit: boolean;
+    'low_credit': boolean;
     /**
      * Set to true if you want to receive notifications about our new features
      * @type {boolean}
      * @memberof AccountNotificationsEmailSettings
      */
-    new_feature: boolean;
+    'new_feature': boolean;
     /**
      * Set to true if you want to receive notifications about receiving faxes
      * @type {boolean}
      * @memberof AccountNotificationsEmailSettings
      */
-    receive_fax: boolean;
+    'receive_fax': boolean;
     /**
      * Set to true if you want to receive notifications when your fax is being send
      * @type {boolean}
      * @memberof AccountNotificationsEmailSettings
      */
-    send_fax: boolean;
+    'send_fax': boolean;
     /**
      * Set to true if you want to receive new voicemail notifications
      * @type {boolean}
      * @memberof AccountNotificationsEmailSettings
      */
-    voicemail: boolean;
+    'voicemail': boolean;
 }

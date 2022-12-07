@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,11 +15,11 @@ export interface OutboxComment {
      * @type {Array<string>}
      * @memberof OutboxComment
      */
-    tags?: Array<string>;
+    'tags'?: Array<string>;
     /**
      *
      * @type {string}
      * @memberof OutboxComment
      */
-    text?: string;
+    'text'?: string;
 }

@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,11 +15,11 @@ export interface PayloadFaxModification {
      * @type {string}
      * @memberof PayloadFaxModification
      */
-    comment: string;
+    'comment': string;
     /**
      *
      * @type {boolean}
      * @memberof PayloadFaxModification
      */
-    is_read: boolean;
+    'is_read': boolean;
 }

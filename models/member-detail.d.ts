@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,11 +15,11 @@ export interface MemberDetail {
      * @type {number}
      * @memberof MemberDetail
      */
-    quota?: number;
+    'quota'?: number;
     /**
      * Role of member in your company
      * @type {string}
      * @memberof MemberDetail
      */
-    role?: string;
+    'role'?: string;
 }

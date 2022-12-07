@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { CoverPageFlags } from './cover-page-flags';
@@ -16,29 +16,29 @@ export interface OutboxCoverPage {
      * @type {string}
      * @memberof OutboxCoverPage
      */
-    name_to: string;
+    'name_to': string;
     /**
      * FROM field on the cover page
      * @type {string}
      * @memberof OutboxCoverPage
      */
-    name_from: string;
+    'name_from': string;
     /**
      * SUBJECT field on the cover page
      * @type {string}
      * @memberof OutboxCoverPage
      */
-    subject: string;
+    'subject': string;
     /**
      * Cover page flags
      * @type {Array<CoverPageFlags>}
      * @memberof OutboxCoverPage
      */
-    flags?: Array<CoverPageFlags>;
+    'flags'?: Array<CoverPageFlags>;
     /**
      * MESSAGE field on the cover page
      * @type {string}
      * @memberof OutboxCoverPage
      */
-    message?: string;
+    'message'?: string;
 }

@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AccountNotificationsEmailSettings } from './account-notifications-email-settings';
@@ -20,29 +20,29 @@ export interface AccountNotificationsSettings {
      * @type {AccountNotificationsEmailSettings}
      * @memberof AccountNotificationsSettings
      */
-    email: AccountNotificationsEmailSettings;
+    'email': AccountNotificationsEmailSettings;
     /**
      *
      * @type {AccountNotificationsLanguage}
      * @memberof AccountNotificationsSettings
      */
-    language?: AccountNotificationsLanguage;
+    'language'?: AccountNotificationsLanguage;
     /**
      *
      * @type {AccountNotificationsPushSettings}
      * @memberof AccountNotificationsSettings
      */
-    push_notifications: AccountNotificationsPushSettings;
+    'push_notifications': AccountNotificationsPushSettings;
     /**
      *
      * @type {AccountNotificationsSlackSettings}
      * @memberof AccountNotificationsSettings
      */
-    slack?: AccountNotificationsSlackSettings;
+    'slack'?: AccountNotificationsSlackSettings;
     /**
      *
      * @type {AccountNotificationsSmsSettings}
      * @memberof AccountNotificationsSettings
      */
-    sms: AccountNotificationsSmsSettings;
+    'sms': AccountNotificationsSmsSettings;
 }

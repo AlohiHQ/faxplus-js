@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AccountData } from './account-data';
@@ -20,83 +20,83 @@ export interface Account {
      * @type {AccountData}
      * @memberof Account
      */
-    account_data?: AccountData;
+    'account_data'?: AccountData;
     /**
      *
      * @type {AccountType}
      * @memberof Account
      */
-    account_type: AccountType;
+    'account_type': AccountType;
     /**
      * Creation date in UTC. Format: *YYYY-MM-DD HH:mm:ss*
      * @type {string}
      * @memberof Account
      */
-    creation_date: string;
+    'creation_date': string;
     /**
      * Account email address
      * @type {string}
      * @memberof Account
      */
-    email: string;
+    'email': string;
     /**
      * The date on which you have changed your password
      * @type {string}
      * @memberof Account
      */
-    last_password_modification_date?: string;
+    'last_password_modification_date'?: string;
     /**
      * Your last name
      * @type {string}
      * @memberof Account
      */
-    lastname?: string;
+    'lastname'?: string;
     /**
      * List of user ids that you are member of.
      * @type {Array<string>}
      * @memberof Account
      */
-    member_of?: Array<string>;
+    'member_of'?: Array<string>;
     /**
      * Your first name
      * @type {string}
      * @memberof Account
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {AccountNotifications}
      * @memberof Account
      */
-    notifications?: AccountNotifications;
+    'notifications'?: AccountNotifications;
     /**
      * Your account phone number
      * @type {string}
      * @memberof Account
      */
-    phone?: string;
+    'phone'?: string;
     /**
      * Profile image path
      * @type {string}
      * @memberof Account
      */
-    profile_image?: string;
+    'profile_image'?: string;
     /**
      *
      * @type {AccountSettings}
      * @memberof Account
      */
-    settings?: AccountSettings;
+    'settings'?: AccountSettings;
     /**
      *
      * @type {AccountStatus}
      * @memberof Account
      */
-    status: AccountStatus;
+    'status': AccountStatus;
     /**
      * User ID of current user
      * @type {string}
      * @memberof Account
      */
-    uid: string;
+    'uid': string;
 }

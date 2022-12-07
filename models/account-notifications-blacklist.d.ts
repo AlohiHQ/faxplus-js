@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,5 +15,5 @@ export interface AccountNotificationsBlacklist {
      * @type {Array<string>}
      * @memberof AccountNotificationsBlacklist
      */
-    uids: Array<string>;
+    'uids': Array<string>;
 }

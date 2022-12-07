@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -15,11 +15,11 @@ export interface RetryOptions {
      * @type {number}
      * @memberof RetryOptions
      */
-    count?: number;
+    'count'?: number;
     /**
      * Delay in seconds between two retries
      * @type {number}
      * @memberof RetryOptions
      */
-    delay?: number;
+    'delay'?: number;
 }

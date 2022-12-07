@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -69,7 +69,7 @@ export declare const FaxesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
@@ -77,7 +77,7 @@ export declare const FaxesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Get your own or your subordinate\'s faxes list
      * @summary List fax records
@@ -85,7 +85,7 @@ export declare const FaxesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
@@ -93,7 +93,7 @@ export declare const FaxesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
 };
 /**
  * FaxesApi - factory interface
@@ -248,7 +248,7 @@ export declare class FaxesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FaxesApi
      */
-    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    deleteFax(requestParameters: FaxesApiDeleteFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get a specific fax record details like duration, pages etc.
      * @summary Get a fax record
@@ -257,7 +257,7 @@ export declare class FaxesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FaxesApi
      */
-    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getFax(requestParameters: FaxesApiGetFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Get your own or your subordinate\'s faxes list
      * @summary List fax records
@@ -266,7 +266,7 @@ export declare class FaxesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FaxesApi
      */
-    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    listFaxes(requestParameters: FaxesApiListFaxesRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * You can modify a fax record\'s comment or mark it as read
      * @summary Modify fax record
@@ -275,5 +275,5 @@ export declare class FaxesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FaxesApi
      */
-    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateFax(requestParameters: FaxesApiUpdateFaxRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
 }

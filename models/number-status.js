@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -14,8 +14,7 @@ exports.NumberStatus = void 0;
  * @export
  * @enum {string}
  */
-var NumberStatus;
-(function (NumberStatus) {
-    NumberStatus["WaitingVerification"] = "waiting_verification";
-    NumberStatus["Active"] = "active";
-})(NumberStatus = exports.NumberStatus || (exports.NumberStatus = {}));
+exports.NumberStatus = {
+    WaitingVerification: 'waiting_verification',
+    Active: 'active'
+};

@@ -4,7 +4,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -14,9 +14,8 @@ exports.AccountType = void 0;
  * @export
  * @enum {string}
  */
-var AccountType;
-(function (AccountType) {
-    AccountType["CorporateAdmin"] = "corporate_admin";
-    AccountType["Individual"] = "individual";
-    AccountType["CorporateMember"] = "corporate_member";
-})(AccountType = exports.AccountType || (exports.AccountType = {}));
+exports.AccountType = {
+    CorporateAdmin: 'corporate_admin',
+    Individual: 'individual',
+    CorporateMember: 'corporate_member'
+};

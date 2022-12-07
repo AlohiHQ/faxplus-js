@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { WebhookEventType } from './webhook-event-type';
@@ -16,17 +16,17 @@ export interface Webhook {
      * @type {string}
      * @memberof Webhook
      */
-    id?: string;
+    'id'?: string;
     /**
      * Webhook target URL
      * @type {string}
      * @memberof Webhook
      */
-    target: string;
+    'target': string;
     /**
      *
      * @type {WebhookEventType}
      * @memberof Webhook
      */
-    event: WebhookEventType;
+    'event': WebhookEventType;
 }

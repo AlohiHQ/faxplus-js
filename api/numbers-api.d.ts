@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AxiosPromise, AxiosInstance } from 'axios';
@@ -64,7 +64,7 @@ export declare const NumbersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getNumber(requestParameters: NumbersApiGetNumberRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    getNumber(requestParameters: NumbersApiGetNumberRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * List your purchased/assigned phone numbers. For corporate members all assigned numbers will be returned, while for the corporate admin, all purchased numbers
      * @summary List phone numbers
@@ -72,7 +72,7 @@ export declare const NumbersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listNumbers(requestParameters: NumbersApiListNumbersRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    listNumbers(requestParameters: NumbersApiListNumbersRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Revoke fax number from a corporate member. To revoke your own number use self as a user_id
      * @summary Revoke number
@@ -80,7 +80,7 @@ export declare const NumbersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    revokeNumber(requestParameters: NumbersApiRevokeNumberRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    revokeNumber(requestParameters: NumbersApiRevokeNumberRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
     /**
      * Assign fax number to a corporate member
      * @summary Assign number
@@ -88,7 +88,7 @@ export declare const NumbersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateNumber(requestParameters: NumbersApiUpdateNumberRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any>>>;
+    updateNumber(requestParameters: NumbersApiUpdateNumberRequest, options?: any): Promise<(<T = unknown, R = import("axios").AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>)>;
 };
 /**
  * NumbersApi - factory interface
@@ -219,7 +219,7 @@ export declare class NumbersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NumbersApi
      */
-    getNumber(requestParameters: NumbersApiGetNumberRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    getNumber(requestParameters: NumbersApiGetNumberRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * List your purchased/assigned phone numbers. For corporate members all assigned numbers will be returned, while for the corporate admin, all purchased numbers
      * @summary List phone numbers
@@ -228,7 +228,7 @@ export declare class NumbersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NumbersApi
      */
-    listNumbers(requestParameters: NumbersApiListNumbersRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    listNumbers(requestParameters: NumbersApiListNumbersRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Revoke fax number from a corporate member. To revoke your own number use self as a user_id
      * @summary Revoke number
@@ -237,7 +237,7 @@ export declare class NumbersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NumbersApi
      */
-    revokeNumber(requestParameters: NumbersApiRevokeNumberRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    revokeNumber(requestParameters: NumbersApiRevokeNumberRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
     /**
      * Assign fax number to a corporate member
      * @summary Assign number
@@ -246,5 +246,5 @@ export declare class NumbersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NumbersApi
      */
-    updateNumber(requestParameters: NumbersApiUpdateNumberRequest, options?: any): Promise<import("axios").AxiosResponse<any>>;
+    updateNumber(requestParameters: NumbersApiUpdateNumberRequest, options?: any): Promise<import("axios").AxiosResponse<unknown>>;
 }

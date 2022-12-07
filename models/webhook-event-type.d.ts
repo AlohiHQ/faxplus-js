@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,7 +9,8 @@
  * @export
  * @enum {string}
  */
-export declare enum WebhookEventType {
-    Received = "fax_received",
-    Sent = "fax_sent"
-}
+export declare const WebhookEventType: {
+    readonly Received: "fax_received";
+    readonly Sent: "fax_sent";
+};
+export declare type WebhookEventType = typeof WebhookEventType[keyof typeof WebhookEventType];

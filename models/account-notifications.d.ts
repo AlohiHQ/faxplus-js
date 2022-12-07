@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 import { AccountNotificationsBlacklist } from './account-notifications-blacklist';
@@ -17,11 +17,11 @@ export interface AccountNotifications {
      * @type {AccountNotificationsBlacklist}
      * @memberof AccountNotifications
      */
-    black_list?: AccountNotificationsBlacklist;
+    'black_list'?: AccountNotificationsBlacklist;
     /**
      *
      * @type {AccountNotificationsSettings}
      * @memberof AccountNotifications
      */
-    settings: AccountNotificationsSettings;
+    'settings': AccountNotificationsSettings;
 }

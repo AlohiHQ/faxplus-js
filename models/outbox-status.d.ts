@@ -1,7 +1,7 @@
 /**
  * FAX.PLUS REST API
  *
- * OpenAPI spec version: 3.0.0
+ * OpenAPI spec version: 3.0.2
  * Contact: info@fax.plus
  */
 /**
@@ -9,9 +9,10 @@
  * @export
  * @enum {string}
  */
-export declare enum OutboxStatus {
-    Submitted = "submitted",
-    Converting = "converting",
-    ScheduledForSending = "scheduled_for_sending",
-    Sending = "sending"
-}
+export declare const OutboxStatus: {
+    readonly Submitted: "submitted";
+    readonly Converting: "converting";
+    readonly ScheduledForSending: "scheduled_for_sending";
+    readonly Sending: "sending";
+};
+export declare type OutboxStatus = typeof OutboxStatus[keyof typeof OutboxStatus];
