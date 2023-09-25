@@ -37,15 +37,25 @@ Example usage:
 
 ```js
 // Get the first entry in the corporate member's inbox
+const axios = require('axios');
+const Configuration = require('@alohi/faxplus-api').Configuration;
+const FaxesApiFp = require('@alohi/faxplus-api').FaxesApiFp;
+const FilesApiFp = require('@alohi/faxplus-api').FilesApiFp;
 
-const request = await FaxesApiFp(configuration).listFaxes(MEMBER_UID);
+const accessToken = 'YOUR_ACCESS_TOKEN'
+const configuration = new Configuration({
+    accessToken: accessToken,
+    basePath: 'https://restapi.fax.plus/v3',
+});
+
+// Get the first entry in the corporate member's inbox
+const request = await FaxesApiFp(configuration).listFaxes({userId: "self"});
 
 const response = await request(axios);
 
-CDR_ID = response.data.data.records[0].id;
+const cdrId = response.data.data.records[0].id;
 
-// Upload file in Node.JS
-
+// Upload file
 const request = await FilesApiFp(configuration).uploadFile("self",
   fs.createReadStream("./test/sample.pdf")
 );
@@ -60,4 +70,4 @@ const response = await request(axios);
 Visit the full API reference at [apidoc.fax.plus](https://apidoc.fax.plus).
 
 ## Author
-© 2022 Alohi (Geneva, Switzerland) - [Alohi.com](https://alohi.com)
+© 2023 Alohi (Geneva, Switzerland) - [Alohi.com](https://alohi.com)
