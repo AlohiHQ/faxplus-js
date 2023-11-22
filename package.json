@@ -1,6 +1,6 @@
 {
 "name": "faxplus",
-"version": "3.0.2",
+"version": "3.0.3",
 "description": "API client for faxplus",
 "author": "Alohi SA",
 "keywords": [
@@ -12,7 +12,7 @@
 "typings": "./dist/index.d.ts",
   "dependencies": {
     "axios": "^0.21.1",
-    "chai": "^4.3.4",
+    "chai": "^4.3.10",
     "form-data": "^4.0.0",
     "tslib": "^2.2.0"
   },
