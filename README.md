@@ -1,4 +1,4 @@
-# FAX.PLUS JavaScript SDK
+# Fax.Plus JavaScript SDK
 
 <p>
 <h4>Made for third-party developers and organizations to send and receive faxes from their own software or
@@ -11,7 +11,7 @@
 </p>
 
 <p>
-    <a href="https://apidoc.fax.plus" target="_blank">API Documentation 3.0.2</a>  •
+    <a href="https://apidoc.fax.plus" target="_blank">API Documentation 3.0.4</a>  •
   <a href="https://www.fax.plus" target="_blank">Home</a>  •
   <a href="https://www.fax.plus/help/" target="_blank">Help Center</a>  •
   <a href="https://www.fax.plus/contact-us/" target="_blank">Contact Us</a>
@@ -36,13 +36,12 @@ yarn add @alohi/faxplus-api
 Example usage:
 
 ```js
-// Get the first entry in the corporate member's inbox
 const axios = require('axios');
 const Configuration = require('@alohi/faxplus-api').Configuration;
 const FaxesApiFp = require('@alohi/faxplus-api').FaxesApiFp;
 const FilesApiFp = require('@alohi/faxplus-api').FilesApiFp;
 
-const accessToken = 'YOUR_ACCESS_TOKEN'
+const accessToken = "YOUR_ACCESS_TOKEN"
 const configuration = new Configuration({
     accessToken: accessToken,
     basePath: 'https://restapi.fax.plus/v3',

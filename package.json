@@ -1,6 +1,6 @@
 {
-"name": "faxplus",
-"version": "3.0.3",
+"name": "@alohi/faxplus",
+"version": "3.0.4",
 "description": "API client for faxplus",
 "author": "Alohi SA",
 "keywords": [
@@ -8,7 +8,7 @@
 "fax",
 "faxplus"
 ],
-"main": "index.js",
+"main": "./dist/index.js",
 "typings": "./dist/index.d.ts",
   "dependencies": {
     "axios": "^0.21.1",
@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@types/node": "^12.11.5",
-    "typescript": "^3.6.4",
     "mocha": "^8.4.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "typescript": "^3.6.4"
   }
 }
